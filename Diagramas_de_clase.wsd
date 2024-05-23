@@ -1,0 +1,65 @@
+@startuml
+class Cliente {
+  + String tipoDocumento
+  + String documento
+  + String nombre
+  + String correo
+  + registrar()
+  + modificar()
+  + eliminar()
+  + consultar()
+}
+
+class FacturaCliente {
+  + int numeroFactura
+  + Date fecha
+  + Cliente cliente
+  + crear()
+  + modificar()
+  + eliminar()
+  + consultar()
+}
+
+class DetalleFactura {
+  + int cantidad
+  + double valorBruto
+  + double valorNeto
+  + double valorDescuento
+  + double valorTotal
+  + agregar()
+  + modificar()
+  + eliminar()
+  + consultar()
+}
+
+class Producto {
+  + String codigo
+  + String nombre
+  + String descripcion
+  + String categoria
+  + double valor
+  + registrar()
+  + modificar()
+  + eliminar()
+  + consultar()
+}
+
+class Inventario {
+  + String codigo
+  + int stock
+  + Date fechaIngreso
+  + double valorDescuento
+  + double porcentajeIVA
+  + registrarEntrada()
+  + registrarSalida()
+  + modificar()
+  + eliminar()
+  + consultar()
+}
+
+Cliente "1" <-- "0..*" FacturaCliente : posee
+FacturaCliente "1" <-- "1..*" DetalleFactura : contiene
+Producto "1" <-- "0..*" DetalleFactura : describe
+Producto "1" <-- "0..*" Inventario : gestiona
+@enduml
+

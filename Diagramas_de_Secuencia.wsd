@@ -1,0 +1,11 @@
+@startuml
+actor Usuario
+Usuario -> FacturaCliente: crear(numeroFactura, fecha, cliente)
+FacturaCliente -> Cliente: consultar(cliente)
+Cliente -> FacturaCliente: devolver(cliente)
+FacturaCliente -> DetalleFactura: agregar(cantidad, valorBruto, valorNeto, valorDescuento, valorTotal)
+DetalleFactura -> Producto: consultar(codigo)
+Producto -> DetalleFactura: devolver(producto)
+DetalleFactura -> FacturaCliente: agregar(detalle)
+FacturaCliente -> Usuario: devolver(numeroFactura)
+@enduml

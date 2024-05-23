@@ -1,0 +1,51 @@
+@startuml
+actor Usuario
+
+usecase RegistrarCliente as UC1
+usecase ModificarCliente as UC2
+usecase EliminarCliente as UC3
+usecase ConsultarCliente as UC4
+
+usecase CrearFactura as UC5
+usecase ModificarFactura as UC6
+usecase EliminarFactura as UC7
+usecase ConsultarFactura as UC8
+
+usecase AgregarDetalle as UC9
+usecase ModificarDetalle as UC10
+usecase EliminarDetalle as UC11
+usecase ConsultarDetalle as UC12
+
+usecase RegistrarProducto as UC13
+usecase ModificarProducto as UC14
+usecase EliminarProducto as UC15
+usecase ConsultarProducto as UC16
+
+usecase RegistrarEntrada as UC17
+usecase RegistrarSalida as UC18
+usecase ModificarInventario as UC19
+usecase EliminarInventario as UC20
+usecase ConsultarInventario as UC21
+
+Usuario --> UC1
+Usuario --> UC2
+Usuario --> UC3
+Usuario --> UC4
+Usuario --> UC5
+Usuario --> UC6
+Usuario --> UC7
+Usuario --> UC8
+Usuario --> UC9
+Usuario --> UC10
+Usuario --> UC11
+Usuario --> UC12
+Usuario --> UC13
+Usuario --> UC14
+Usuario --> UC15
+Usuario --> UC16
+Usuario --> UC17
+Usuario --> UC18
+Usuario --> UC19
+Usuario --> UC20
+Usuario --> UC21
+@enduml
